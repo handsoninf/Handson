@@ -1,0 +1,94 @@
+93.188.162.165:9000
+
+python3 manage.py runserver 93.188.162.165:9000
+
+
+ssh root@93.188.162.165
+
+ssh handson@93.188.162.165
+
+cd /home/admin/web/stock.handson.inf.br/public_html
+virtualenv -p python3 envstock
+source envstock/bin/activate
+pip3 install gunicorn psycopg2
+git clone https://github.com/thiagopena/djangoSIGE.git
+chmod 777 djangoSIGE
+mv djangoSIGE stock
+cd stock
+pip3 install -r requirements.txt
+python3 contrib/env_gen.py
+python3 manage.py migrate
+python3 manage.py createsuperuser
+cd  /home/admin/web/stock.handson.inf.br/public_html/stock
+
+
+sudo ufw allow 9000
+sudo iptables -I INPUT -p tcp --dport 9000 -j ACCEPT
+python3 manage.py runserver 93.188.162.165:9000
+
+
+Alias /static /public_html/stock/djangosige/static
+    <Directory /public_html/stock/djangosige/static>
+        tudo concedido
+    </Directory>
+
+
+    <Directory /public_html/stock/djangosige>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+
+
+
+
+
+    cd /home/admin/web/stock.handson.inf.br/public_html/stock/djangosige
+    sudo chmod 664 db.sqlite3
+     cd /home/admin/web/stock.handson.inf.br/public_html/
+    sudo chmod 775 stock
+    cd /home/admin/web/stock.handson.inf.br/public_html/stock/djangosige
+    sudo chown :www-data db.sqlite3
+  cd /home/admin/web/stock.handson.inf.br/public_html/
+        sudo chown -R www-data:www-data envstock
+    sudo ufw delete allow 9000
+   sudo apache2ctl configtest
+   sudo systemctl restart apache2
+
+   https://fxdata.cloud/tutorials/serve-django-applications-with-apache-and-mod_wsgi-on-debian-8
+
+
+
+
+
+
+/envs -> virtualenvs
+/www
+/www/meusite.com.br -> Diretório raiz do "meusite.com.br"
+/www/meusite.com.br/nginx.conf -> Configurações do nginx para esse projeto
+/www/meusite.com.br/meusite.service -> Configurações do service do gunicorn
+/www/meusite.com.br/meusite -> Projeto Django
+/www/meusite.com.br/meusite/meusite -> Localização do arquivo wsgi.py
+
+
+
+/public_html/stockprod
+
+Senha Vesta
+
+v-change-user-password admin new_password
+
+Senha Root
+ passwd
+
+
+https://www.youtube.com/watch?v=ofpBBPZkJ54&t=459s
+
+
+
+https://www.youtube.com/watch?v=956hTFO14n8&t=33s
+
+
+New python executable in /var/www/.virtualenvs/stockenv/bin/python
+Installing setuptools, pip, wheel...done.

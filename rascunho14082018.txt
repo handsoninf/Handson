@@ -1,0 +1,32 @@
+https://king.host/python (https://king.host/hospedagem-de-sites#plano Mensal 22,40 Trimestral 61,80 anual 204,00)
+
+
+
+https://github.com/mirumee/saleor
+https://github.com/arocks/edge
+https://github.com/wagtail/wagtail
+https://github.com/pinax/pinax
+
+
+
+https://github.com/chmulato/caracore-pdv (PDV em Java)
+https://github.com/gugoan/pdv-web (PDV PHP)
+https://github.com/Lipe16/PDV-criado-com-Java (PDV em Java)
+
+
+https://github.com/christiancms/Restaurante (Java)
+https://github.com/jonatasjp/projeto-restaurante (Java)
+https://github.com/w3aewander/Restaurante (PHP)
+https://github.com/schoolofnetcom/guia-restaurante(PHP)
+https://github.com/edsonmgoz/restaurante(PHP)
+https://github.com/AquinoEdmair/Restaurante (PHP)
+https://github.com/blendosantos/restaurante (PHP)
+https://github.com/edgardo001/proyecto-angular-restaurante (ANGULAR/PHP)
+
+
+
+https://github.com/rg3915/orcamentos (Gestão de Obras - Python)
+https://github.com/SergioPacheco/orcaWeb_JSF (Gestão de Obras Ava) 
+
+
+https://sourceforge.net/projects/spmopenerp/
